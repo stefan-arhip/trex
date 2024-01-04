@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="trex_client.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="231"/>
+        <CursorPos X="67" Y="240"/>
+        <UsageCount Value="129"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\objpas\classes\classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="954"/>
+        <CursorPos X="15" Y="974"/>
+        <UsageCount Value="3"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\inc\systemh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="448"/>
+        <CursorPos X="3" Y="465"/>
+        <UsageCount Value="7"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-net\src\ssockets.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="126"/>
+        <CursorPos X="22" Y="90"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\rtl-extra\src\inc\socketsh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="153"/>
+        <CursorPos X="10" Y="172"/>
+        <UsageCount Value="3"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\rtl-extra\src\win\winsock2.pp"/>
+        <UnitName Value="WinSock2"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1198"/>
+        <CursorPos X="10" Y="1217"/>
+        <UsageCount Value="3"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\objpas\sysutils\filutilh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="195"/>
+        <CursorPos X="10" Y="206"/>
+        <UsageCount Value="6"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\hash\src\md5.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="155"/>
+        <CursorPos X="10" Y="171"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\objpas\sysutils\osutilsh.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="10" Y="36"/>
+        <UsageCount Value="10"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="155" Column="41" TopLine="128"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="156" Column="75" TopLine="137"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="345" Column="64" TopLine="321"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="141" Column="5" TopLine="124"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="386" Column="42" TopLine="363"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="381" Column="77" TopLine="365"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="121" Column="21" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="320" Column="36" TopLine="285"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="191" Column="41" TopLine="174"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="2" Column="8"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="191" Column="41" TopLine="161"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="191" Column="41" TopLine="161"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="268" Column="43" TopLine="238"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="318" Column="39" TopLine="288"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="409" Column="39" TopLine="379"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="95" Column="24" TopLine="83"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="114" Column="35" TopLine="95"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="143" Column="15" TopLine="138"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="431" Column="14" TopLine="410"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="197" Column="30" TopLine="168"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="64" Column="35" TopLine="41"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="83" Column="20" TopLine="50"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="237" Column="59" TopLine="207"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="238" TopLine="222"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="46" Column="15" TopLine="30"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="240" Column="67" TopLine="214"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_client.lpr"/>
+        <Caret Line="244" Column="73" TopLine="210"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

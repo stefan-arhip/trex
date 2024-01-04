@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="trex_gui.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos X="52" Y="26"/>
+        <UsageCount Value="191"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="trex_gui_main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="1099"/>
+        <CursorPos X="26" Y="1129"/>
+        <UsageCount Value="191"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="trex_gui_device.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fDevice"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="9"/>
+        <CursorPos X="25" Y="31"/>
+        <UsageCount Value="77"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\components\lazutils\fileutil.pas"/>
+        <UnitName Value="FileUtil"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="44"/>
+        <CursorPos X="10" Y="63"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-net\src\ssockets.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="19"/>
+        <CursorPos X="3" Y="37"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\objpas\classes\classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="795"/>
+        <CursorPos X="3" Y="816"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\win\wininc\func.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="167"/>
+        <CursorPos X="10" Y="186"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2939"/>
+        <CursorPos Y="2957"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\customlistbox.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="222"/>
+        <CursorPos Y="241"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\dialogs.pp"/>
+        <UnitName Value="Dialogs"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="707"/>
+        <CursorPos X="11" Y="725"/>
+        <UsageCount Value="9"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="28">
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="1002" Column="3" TopLine="996"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="630" Column="3" TopLine="621"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="263" Column="3" TopLine="250"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="421" Column="28" TopLine="402"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="423" Column="30" TopLine="402"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="822" Column="33" TopLine="821"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="555" Column="60" TopLine="550"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="514" Column="37" TopLine="505"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="628" Column="30" TopLine="597"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="620" Column="42" TopLine="598"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="613" Column="18" TopLine="592"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="470" Column="7" TopLine="457"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="1170" Column="3" TopLine="1164"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="1200" Column="18" TopLine="1170"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="675" Column="54" TopLine="668"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="12" Column="33"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="1005" Column="3" TopLine="1002"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="1161" TopLine="1160"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="180" Column="27" TopLine="164"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="300" Column="48" TopLine="280"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="89" Column="48" TopLine="74"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="282" Column="22" TopLine="252"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="293" Column="32" TopLine="279"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="478" Column="31" TopLine="458"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="520" Column="49" TopLine="490"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="915" Column="26" TopLine="885"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="994" Column="27" TopLine="964"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="1059" Column="28" TopLine="1029"/>
+      </Position>
+      <Position>
+        <Filename Value="trex_gui_main.pas"/>
+        <Caret Line="1062" Column="41" TopLine="1032"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

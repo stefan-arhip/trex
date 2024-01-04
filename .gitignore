@@ -1,0 +1,7 @@
+backup/
+lib/
+DOC/
+ICONS/
+VIDEO/
+*.dbg
+*.exe
