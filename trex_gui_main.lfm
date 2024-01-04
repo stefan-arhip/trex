@@ -10,7 +10,7 @@ object fMain: TfMain
   OnActivate = FormActivate
   OnCreate = FormCreate
   SessionProperties = 'cbFilesChecksum.Checked;cbFoldersSize.Checked;Height;lbRemoteIP.Items;lbRemoteName.Items;lbRemotePort.Items;Left;Top;Width;tabDeviceList.Tag'
-  LCLVersion = '2.2.4.0'
+  LCLVersion = '3.0.0.3'
   object sbMain: TStatusBar
     Left = 0
     Height = 23
@@ -223,15 +223,12 @@ object fMain: TfMain
           Width = 279
           Anchors = [akTop, akLeft, akRight]
           ItemHeight = 15
-          ItemIndex = 1
           Items.Strings = (
-            '\\tulcea-fs3.builtontrust.it\braila\'
-            'C:\TEMP\'
-            'C:\Users\stefan.arhip\OneDrive - VARD\Documents\# SOURCES\Tabbed Remote Explorer 2023\'
+            'C:\'
           )
-          OnEditingDone = cbRootEditingDone
           TabOrder = 1
           Text = 'C:\TEMP\'
+          OnEditingDone = cbRootEditingDone
         end
         object Panel1: TPanel
           Left = 281
@@ -767,7 +764,7 @@ object fMain: TfMain
         Left = 376
         Height = 19
         Top = 24
-        Width = 99
+        Width = 97
         Caption = 'Get folders size'
         TabOrder = 2
       end
@@ -775,7 +772,7 @@ object fMain: TfMain
         Left = 376
         Height = 19
         Top = 48
-        Width = 119
+        Width = 117
         Caption = 'Get files checksum'
         TabOrder = 3
       end

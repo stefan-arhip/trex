@@ -37,6 +37,8 @@ const
   intColumnChecksum = 3;
   intColumnAddress = 4;
 
+  strInfo = 'a software created by Stefan Arhip';
+
 type
 
   { TfMain }
@@ -125,7 +127,7 @@ type
       Section: THeaderSection);
     procedure lvRemoteFilesDblClick(Sender: TObject);
     procedure lvRemoteFilesSelectItem(Sender: TObject; Item: TListItem;
-      Selected: Boolean);
+      Selected: boolean);
     procedure miFolderCreateClick(Sender: TObject);
     procedure miItemRenameClick(Sender: TObject);
     procedure miListSelectAllClick(Sender: TObject);
@@ -162,7 +164,7 @@ var
   strRemoteName, strRemoteIP: string;
   intRemotePort: cardinal;
 
-{ TfMain }
+  { TfMain }
 
 function FilesizeToCustomFormat(intFileSize: int64): string;
 begin
@@ -399,7 +401,7 @@ begin
 
   sbMain.Panels[0].Text := 'ready';
   sbMain.Panels[1].Text := '';
-  sbMain.Panels[2].Text := 'a software created by stefan.arhip@vard.com, +40730290641';
+  sbMain.Panels[2].Text := strInfo;
   Screen.Cursor := crDefault;
 
   buRetrieveFilelistClick(Sender);
@@ -491,7 +493,7 @@ begin
 
   sbMain.Panels[0].Text := 'ready';
   sbMain.Panels[1].Text := '';
-  sbMain.Panels[2].Text := 'a software created by stefan.arhip@vard.com, +40730290641';
+  sbMain.Panels[2].Text := strInfo;
 
   Screen.Cursor := crDefault;
 
@@ -550,64 +552,64 @@ begin
       for i := Low(arrFiles) to High(arrFiles) do
         intTotalFilesize := intTotalFilesize + FileSize(strDir + '\' + arrFiles[i]);
       for i := Low(arrFiles) to High(arrFiles) do
-        try
-          //boolTransferOk := SendFile(strDir, arrFiles[i], Socket);
-          //SendFile(const strFolder, strFilename: string; Data: TInetSocket): boolean;
-          /////////
+      try
+        //boolTransferOk := SendFile(strDir, arrFiles[i], Socket);
+        //SendFile(const strFolder, strFilename: string; Data: TInetSocket): boolean;
+        /////////
 
-          boolTransferOk := False;
-          Initialize(Buffer, Length(Buffer));
-          strFilename := arrFiles[i];
-          if FileExists(strDir + '\' + strFilename) then
-          begin
-            fsContainer := TFileStream.Create(strDir + '\' + strFilename,
-              fmOpenRead or fmShareDenyNone);
-            try
-              intCurrentFileSize := fsContainer.Size;
-              strChecksum := MD5Print(MD5File(strDir + '\' + strFilename, BUFSIZE));
+        boolTransferOk := False;
+        Initialize(Buffer, Length(Buffer));
+        strFilename := arrFiles[i];
+        if FileExists(strDir + '\' + strFilename) then
+        begin
+          fsContainer := TFileStream.Create(strDir + '\' + strFilename,
+            fmOpenRead or fmShareDenyNone);
+          try
+            intCurrentFileSize := fsContainer.Size;
+            strChecksum := MD5Print(MD5File(strDir + '\' + strFilename, BUFSIZE));
 
-              Socket.WriteDWord(intCurrentFilesize);
-              Socket.WriteAnsiString(strChecksum);
-              Socket.WriteAnsiString(strFilename);
+            Socket.WriteDWord(intCurrentFilesize);
+            Socket.WriteAnsiString(strChecksum);
+            Socket.WriteAnsiString(strFilename);
 
-              sendFileSize := 0;
-              repeat
-                BytesRead := fsContainer.Read(Buffer, SizeOf(Buffer));
-                Socket.WriteBuffer(Buffer, BytesRead);
-                Inc(sendFileSize, BytesRead);
+            sendFileSize := 0;
+            repeat
+              BytesRead := fsContainer.Read(Buffer, SizeOf(Buffer));
+              Socket.WriteBuffer(Buffer, BytesRead);
+              Inc(sendFileSize, BytesRead);
 
-                LoadingTime := DateUtils.MilliSecondsBetween(Now(), StartTime) / 1000;
-                strCopiedFilesize :=
-                  FilesizeToCustomFormat(intCopiedFilesize + sendFileSize);
-                strCurrentFilesize := FilesizeToCustomFormat(intCurrentFilesize);
-                strSendFilesize := FilesizeToCustomFormat(sendFileSize);
-                strTotalFilesize := FilesizeToCustomFormat(intTotalFilesize);
+              LoadingTime := DateUtils.MilliSecondsBetween(Now(), StartTime) / 1000;
+              strCopiedFilesize :=
+                FilesizeToCustomFormat(intCopiedFilesize + sendFileSize);
+              strCurrentFilesize := FilesizeToCustomFormat(intCurrentFilesize);
+              strSendFilesize := FilesizeToCustomFormat(sendFileSize);
+              strTotalFilesize := FilesizeToCustomFormat(intTotalFilesize);
 
-                sbMain.Panels[0].Text :=
-                  Format('%d/%d files [%s/%s] sent in %s',
-                  [i + 1, constFiles, strCopiedFilesize, strTotalFilesize,
-                  SecondsToCustomFormat(LoadingTime)]);
+              sbMain.Panels[0].Text :=
+                Format('%d/%d files [%s/%s] sent in %s',
+                [i + 1, constFiles, strCopiedFilesize, strTotalFilesize,
+                SecondsToCustomFormat(LoadingTime)]);
 
-                sbMain.Panels[1].Text :=
-                  Format('%s/%s', [strSendFilesize, strCurrentFilesize]);
-                sbMain.Panels[2].Text := strFilename;
-                fMain.Refresh;
-              until sendFileSize >= intCurrentFilesize;
+              sbMain.Panels[1].Text :=
+                Format('%s/%s', [strSendFilesize, strCurrentFilesize]);
+              sbMain.Panels[2].Text := strFilename;
+              fMain.Refresh;
+            until sendFileSize >= intCurrentFilesize;
 
-              strCheck := Socket.ReadAnsiString;
-              boolTransferOk := strChecksum = strCheck;
-            finally
-              fsContainer.Free;
-            end;
+            strCheck := Socket.ReadAnsiString;
+            boolTransferOk := strChecksum = strCheck;
+          finally
+            fsContainer.Free;
           end;
-
-          /////////
-          intCopiedFilesize := intCopiedFilesize + intCurrentFilesize;
-          if boolTransferOk then
-            Inc(intTransferredFiles);
-        except
-          //MessageDlg('Error sending file "' + strDir + strFilename + '"', mtWarning, [mbOK], 0);
         end;
+
+        /////////
+        intCopiedFilesize := intCopiedFilesize + intCurrentFilesize;
+        if boolTransferOk then
+          Inc(intTransferredFiles);
+      except
+        //MessageDlg('Error sending file "' + strDir + strFilename + '"', mtWarning, [mbOK], 0);
+      end;
 
       if intTransferredFiles <> constFiles then
         MessageDlg(Format('Error update client!'#13'%d/%d',
@@ -617,8 +619,7 @@ begin
 
       sbMain.Panels[0].Text := 'ready';
       sbMain.Panels[1].Text := '';
-      sbMain.Panels[2].Text :=
-        'a software created by stefan.arhip@vard.com, +40730290641';
+      sbMain.Panels[2].Text := strInfo;
       Screen.Cursor := crDefault;
     end;
   end;
@@ -674,8 +675,8 @@ begin
           strFilename := CreateRelativePath(sLFiles[i - 1], strDir);
           LoadingTime := DateUtils.MilliSecondsBetween(Now(), StartTime) / 1000;
           sbMain.Panels[0].Text :=
-            Format('%d/%d filenames sent in %s',
-            [i - 1, sLFiles.Count, SecondsToCustomFormat(LoadingTime)]);
+            Format('%d/%d filenames sent in %s', [i - 1,
+            sLFiles.Count, SecondsToCustomFormat(LoadingTime)]);
           sbMain.Panels[1].Text := '';
           sbMain.Panels[2].Text := strFilename;
           fMain.Refresh;
@@ -705,7 +706,7 @@ begin
 
   sbMain.Panels[0].Text := 'ready';
   sbMain.Panels[1].Text := '';
-  sbMain.Panels[2].Text := 'a software created by stefan.arhip@vard.com, +40730290641';
+  sbMain.Panels[2].Text := strInfo;
   Screen.Cursor := crDefault;
 
   buRetrieveFilelistClick(Sender);
@@ -782,7 +783,7 @@ begin
 
   sbMain.Panels[0].Text := 'ready';
   sbMain.Panels[1].Text := '';
-  sbMain.Panels[2].Text := 'a software created by stefan.arhip@vard.com, +40730290641';
+  sbMain.Panels[2].Text := strInfo;
   Screen.Cursor := crDefault;
 end;
 
@@ -859,7 +860,7 @@ begin
 
   sbMain.Panels[0].Text := 'ready';
   sbMain.Panels[1].Text := '';
-  sbMain.Panels[2].Text := 'a software created by stefan.arhip@vard.com, +40730290641';
+  sbMain.Panels[2].Text := strInfo;
   Screen.Cursor := crDefault;
 end;
 
@@ -911,6 +912,10 @@ begin
   laLazarus.Caption := 'Lazarus: ' + lcl_version;
   laFPC.Caption := 'FPC: ' + {$I %FPCVersion%};
   laTarget.Caption := 'Target: ' + {$I %FPCTarget%};
+
+  cbRoot.Items.Clear;
+  cbRoot.Items.Add(ExtractFileRoot(Application.ExeName));
+  cbRoot.Items.Add(ExtractFileDir(Application.ExeName));
 
   stLocal.Root := ExtractFileDir(ParamStr(0));
   if cbRoot.ItemIndex > -1 then
@@ -977,7 +982,6 @@ begin
           tabDeviceList.Tabs.Delete(intDeviceIndex);
         end;
   end;
-
 end;
 
 procedure TfMain.lvRemoteFilesDblClick(Sender: TObject);
@@ -1000,7 +1004,7 @@ begin
 end;
 
 procedure TfMain.lvRemoteFilesSelectItem(Sender: TObject; Item: TListItem;
-  Selected: Boolean);
+  Selected: boolean);
 var
   i, intItemsSelected: integer;
 begin
@@ -1230,7 +1234,7 @@ begin
 
   sbMain.Panels[0].Text := 'ready';
   sbMain.Panels[1].Text := '';
-  sbMain.Panels[2].Text := 'a software created by stefan.arhip@vard.com, +40730290641';
+  sbMain.Panels[2].Text := strInfo;
   Screen.Cursor := crDefault;
 end;
 

@@ -297,12 +297,12 @@ type
             intFileDate := FileAge(strFileName);
             strFileDate := '';
             if intFileDate > -1 then
-              try
-                dtFileDate := FileDateToDateTime(intFileDate);
-                strFileDate := FormatDateTime('yyyy-mm-dd hh:nn', dtFileDate);
-              except
-                strFileDate := '';
-              end;
+            try
+              dtFileDate := FileDateToDateTime(intFileDate);
+              strFileDate := FormatDateTime('yyyy-mm-dd hh:nn', dtFileDate);
+            except
+              strFileDate := '';
+            end;
             //strCheck := MD5Print(MD5File(strFilename));
           end;
           Data.WriteDWord(intFileSize);
